@@ -1,0 +1,665 @@
+/* Importing the font-family files and information for use in the project */
+@font-face {
+  font-family: "SiemensSans";
+  src: url('https://surveys.siemens.cloud/Media/Siemens/SiemensSans_Roman.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SiemensSans";
+  src: url('https://surveys.siemens.cloud/Media/Siemens/SiemensSans_Bold.otf') format('opentype');
+  font-weight: bold;
+}
+.se-debug-header select {
+    color: #333;
+}
+body {
+  font-family: 'SiemensSans', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+.printResponsesButtonContainer {
+display: none;
+}
+.printPageBackground .printhide {
+  display: none;
+}
+.customresponse {display:none;}
+.printPageBackground  .customresponse {display:block;}
+
+@media only screen and (max-width: 1024px) {
+  .customresponse {
+    display:none !important;
+  }
+}
+
+/* To fix the scrolling issue on iOS */
+.questionBackground fieldset {
+  overflow: hidden;
+}
+select.respondentLanguage {
+  overflow-y: scroll !important;
+  -ms-overflow-style: scrollbar;
+}
+/* This block is necessary to be able to properly define typographic rules
+when using PureCSS */
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  font-family: 'SiemensSans', Helvetica, Arial, sans-serif;
+  font-size: 1.03em;
+  font-weight: normal;
+  color: #2D373C;
+}
+/*The #headerThirdTier refers to how the header was split to allow for integration
+of the progress bar */
+h1,
+h2,
+#headerThirdTier h1,
+#headerThirdTier h2 {
+  color: #F5F5F0;
+  font-family: "SiemensSans", Helvetica, Arial, sans-serif;
+  font-size: 1.6em !important;
+}
+h1,
+#headerThirdTier h1 {
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-right: 1em;
+}
+h2,
+#headerThirdTier h2 {
+  font-weight: normal;
+  margin-top: 0.3em;
+  padding-right: 1em;
+}
+#headerThirdTierContainer {
+  background-color: #879BAA;
+  margin: 0;
+  padding: 0;
+}
+#headerFirstTier,
+#headerThirdTierContainer {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+/* General and broad redefinition of the typographic rules for the major parts of the survey */
+.pageContent,
+.pageContentContainer,
+.questionTextContainer,
+.questionBackground,
+.questionText,
+.allQuestion,
+.choice,
+.choiceText,
+.progressBar {
+  font-family: 'SiemensSans', Helvetica, Arial, sans-serif !important;
+  font-size: 1.03em;
+  font-weight: normal !important;
+  color: #2D373C;
+}
+label.choiceText {
+  font-size: 1.03em !important;
+}
+.choiceList,
+.choice,
+label.choiceText {
+  font-size: 1.03em;
+  font-family: normal;
+}
+.pageHeader {
+  margin-bottom: .5em;
+}
+/* Appearance rules for the first and third tier of the header. See Header.html in the code snippets
+for more information */
+#headerFirstTier {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  max-width: 1000px;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin: auto;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+#headerThirdTier {
+  width: auto;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  max-width: 1000px;
+  background-color: #879BAA;
+  font-family: 'SiemensSans', Arial, Helvetica, sans-serif;
+}
+#headerLinks {
+  font-size: 1.03em;
+}
+#headerLogo {
+  width: 144px;
+  height: 60px;
+}
+/* Rules regarding the progress bar. Please note that modifying these
+settings might also require you to validate the preset values in Look & Feel editor */
+.progressBar {
+  color: white !important;
+  font-size: 1.03em !important;
+  padding-bottom: .5em;
+}
+.progressBarBackground {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+/* Values for grids */
+th.gridRowHeader span,
+th.gridColumnHeader,
+th.gridColumnHeader span {
+  font-family: 'SiemensSans', Arial, Helvetica, sans-serif !important;
+  font-size: 1.01em !important;
+  font-weight: bold;
+}
+th.gridRowHeader {
+  padding-right: 3em;
+}
+.pageContentContainer {
+  clear: both;
+}
+.questionBackground {
+  width: auto !important;
+  max-width: 1000px;
+  padding-left: 1em;
+}
+.standard table.grid
+{
+width: 100%;
+}
+.questionBlock {
+  background-color: white;
+  color: #879BAA !important;
+
+}
+.questionTextContainer {
+  text-align: left;
+  padding-left: 0;
+  padding-right: 2em;
+}
+/* This is for the style settings of the buttons (Next, Back, Submit, etc) */
+.navigationBarContainer .buttonContainer input {
+  border: none;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: normal;
+}
+.navigationBarContainer {
+  background-color: #879BAA;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.navigationBar {
+  max-width: 1000px;
+}
+/* This rule allows for displaying content in two columns */
+.desc_2Columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+}
+.questionContainer,
+.questionContent {
+  text-align: left;
+}
+.pageBackground.centerQuestions .questionContent {
+  display: inline;
+}
+/* NOTE: This rule should most likely be made more precise with a secondary selector. As it is, the rule will impact ALL textareas */
+textarea {
+  height: 50px;
+  max-height: 90%;
+  width: 400px;
+  max-width: 90%;
+  overflow-y: scroll;
+  resize: none;
+}
+.choice {
+  padding: .5em;
+}
+/* Sets of rules regarding the color-graded choice question */
+.choice_color1 {
+  background-color: #647D2D;
+  padding: 1em 2em 1em 2em;
+}
+.choice_color2 {
+  background-color: #AAB414;
+  padding: 1em 2em 1em 2em;
+}
+.choice_color3 {
+  background-color: #FFB900;
+  padding: 1em 2em 1em 2em;
+}
+.choice_color4 {
+  background-color: #EB780A;
+  padding: 1em 2em 1em 2em;
+}
+.choice_color5 {
+  background-color: #990000;
+  padding: 1em 2em 1em 2em;
+}
+.choice_color1 label,
+.choice_color4 label,
+.choice_color5 label {
+  color: #F5F5F0;
+}
+/* Footer rules */
+span#PageFooterControl_PageFooterLabel {
+  font-size: .8em;
+  font-weight: normal;
+  color: #879BAA;
+}
+#PageFooterControl_PageFooterLabel ul {
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+#PageFooterControl_PageFooterLabel ul li {
+  display: inline;
+  margin-right: 1em;
+}
+/* HYPERGRID: These rules are necessary only for the custom grid question. If this question is not used, you can remove the Hypergrid rules */
+.hyperGridDesc {
+  font-weight: 700;
+}
+.hyperGridScale,
+.hyperGridScale td,
+.hyperGridImportance,
+.hyperGridImportance td {
+  background-color: white !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.hyperGridImportance {
+  font-weight: 700;
+}
+.hyperGridImportance td:first-child {
+  width: auto;
+}
+.hyperGridImportance td {
+  width: 45px;
+}
+.hyperGridTextInput {
+  width: 25px;
+  margin-right: 2em;
+}
+.hyperGridScale td {
+  padding-bottom: 2em;
+}
+.spaceUnder td {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+/* Rules needed for the mouseover tooltip 
+.tooltip_templates {
+    display:none;
+}
+
+.displayTooltip {
+    width:300px;
+    height:125px;
+    }
+
+.displayTooltip img {
+    width:300px;
+    height:auto;
+}
+
+.rowWithTooltip {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    align-content:space-between;
+}
+
+.rowWithTooltip > span {
+    width:auto !important;
+} */
+.more_info {
+  position: relative;
+  cursor: pointer;
+}
+.more_info .popup {
+  position: absolute;
+  top: 25px;
+  /*must overlap parent element otherwise pop-up doesn't stay open when rolling over '*/
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-left: 35px;
+  padding: 10px;
+  left: 0;
+  /* max-width: 240px; */
+  min-width: 350px;
+  z-index: 9999999;
+  display: none;
+  font-family: 'SiemensSans', Helvetica, Arial, sans-serif !important;
+  font-size: 1.03em;
+  font-weight: normal;
+  color: #2D373C;
+}
+.gridHeaderHide {
+  display: none;
+}
+/* no close-button on session timeout warning dialog */
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+/* Media query rules. IMPORTANT: The sizing of the progress bar cannot be set with relative values (unfortunately). As such, more breakpoints
+have been added in the media queries to allow for smoother resizing of the window. When defining new rules, you do not need to inform ALL 
+these breakpoints. Only specify the rule at the actual relevant breakpoint */
+@media only screen and (max-width: 65em) {
+  .progressBarBackground {
+    width: 850px;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .progressBarBackground {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 52em) {
+  .progressBarBackground {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 47em) {
+  /* Because this breaking point is the breaking point where two columns become one - start page of our Siemens template*/
+  .desc_2Columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+  .progressBarBackground {
+    width: 300px;
+  }
+  /* To make the choices stack vertically */
+  .choiceList {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .choiceList .choice {
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  textarea {
+    width: 60vw;
+  }
+  #PageFooterControl_PageFooterLabel ul li {
+    display: block;
+  }
+}
+/* 47em = 750px (with base font size of 16px) */
+@media only screen and (max-width: 47em) {
+  .progressBarBackground {
+    width: 300px;
+  }
+  textarea {
+    width: 50vw;
+  }
+  /* Start of table reflow definition */
+  /* Elements of style for table reflow */
+  table.grid,
+  .grid thead,
+  .grid tbody,
+  .grid tfooter,
+  .grid th,
+  .grid td,
+  .grid tr {
+    display: block;
+  }
+  table.grid {
+    width: 100%;
+    margin: auto;
+  }
+  .grid thead tr,
+  .grid tr:first-of-type th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .grid tbody td {
+    border: none;
+    /*border-bottom: 1px solid #879BAA; */
+    position: relative;
+    padding-left: 90%;
+    white-space: normal;
+    text-align: left;
+  }
+  .grid td:before {
+    position: absolute;
+    top: 1em;
+    left: 4em;
+    width: 70%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    content: attr(data-title);
+  }
+  /* Definition of different background colour compared to matrix visualization */
+  .gridRow,
+  .gridAlternateRow {
+    background-color: #FFFFFF !important;
+  }
+  th.gridItem {
+    background-color: white !important;
+    font-weight: 700;
+  }
+  table.choiceGrid tbody th.gridColumnHeader[data-choice-position] {
+    display: none !important;
+  }
+  table.grid tr {
+    margin-bottom: 2em;
+  }
+  /* End of table reflow definition */
+}
+@media only screen and (max-width: 34em) {
+  .progressBarBackground {
+    width: 200px;
+  }
+  textarea {
+    width: 40vw;
+  }
+}
+.pageBackground:not(.ui-page) .kommentar .choiceKommentar {
+  float: left;
+  width: 39%; 
+  padding: 1%;
+  height: 40px;
+}
+.ui-page .kommentar .choiceKommentar {
+  display: flex;
+  padding: 1%;
+  height: 40px;
+  flex-flow: row nowrap;
+}
+.pageBackground:not(.ui-page) .kommentar {
+  width: 786px;
+}
+.ui-page .kommentar {
+  width: 99%;
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 280px;
+}
+.kommentar select {
+  width: 100%;
+}
+.kommentar .radioButton {
+  float: left;
+}
+.pageBackground:not(.ui-page) .kommentar .textArea {
+  width: 99%;
+  padding: 1%;
+  height: 125px;
+}
+.ui-page .kommentar .textArea {
+  flex-basis: 100%;
+  padding: 1%;
+  margin: 1%;
+  height: 125px;
+}
+.kommentar select {
+  height: 100%;
+}
+.kommentar select,
+.kommentar .textArea {
+  border: solid 1px #999;
+}
+.kommentar input[type="radio"] {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.kommentar .choiceText img {
+  width: 25px;
+}
+.pageBackground:not(.ui-page) .kommentar .choiceText:not(.topicHeader) {
+  display: block;
+  width: 44%;
+  float: left;
+  margin-right: 10px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  height: 35px;
+}
+.kommentar .radioButton {
+  width: 100%;
+}
+.pageBackground:not(.ui-page) .kommentar .kLabel {
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+.pageBackground:not(.ui-page) .kommentar .kIcon {
+  display: block;
+  float: left;
+  margin-left: 7%;
+  margin-top: 4px;
+}
+.pageBackground:not(.ui-page) .kommentar .kommentarBox {
+  width: 84%;
+  padding: 1%;
+  margin-left: 13%;
+}
+.ui-page .kommentar .kommentarBox {
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  flex-flow: row nowrap ;
+}
+.kommentar .topicLabel {
+  float: left;
+  display: block;
+  padding: 1%;
+  margin-top: 10px;
+  width: 11%;
+}
+.ui-page .kommentar .topicLabel {
+  margin-top: 10px;
+  width: 7%;
+}
+.kommentar .radioButton .choice input[value="1"][type="radio"]:checked + label {
+  border: 3px solid green;
+  color: green;
+}
+.kommentar .radioButton .choice input[value="2"][type="radio"]:checked + label {
+  border: 3px solid red;
+  color: red;
+}
+.ui-page .choiceKommentar .choice {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.ui-page .kommentar .choiceText:not(.topicHeader) {
+  flex-basis: 48%;
+  border: 1px solid #999;
+  border-radius: 3px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.pageBackground:not(.ui-page) .mKommentarIcon,
+.pageBackground:not(.ui-page) .wKommentarIcon {
+  text-align: center;
+  width: 50px;
+  float: left;
+}
+.ui-page .mKommentarIcon,
+.ui-page .wKommentarIcon {
+  text-align: center;
+  width: 50px;
+}
+.mehrKommentar img,
+.wenigerKommentar img {
+  max-width: 100%;
+}
+.pageBackground:not(.ui-page) .mKommentarLabel,
+.pageBackground:not(.ui-page) .wKommentarLabel {
+  font-weight: normal;
+  float: left;
+  position: relative;
+  top: 15px;
+  margin-left: 10px;
+}
+.ui-page .mKommentarLabel,
+.ui-page .wKommentarLabel {
+  font-weight: normal;
+}
+.aktivKommentar {
+  display: none !important;
+}
+.mehrKommentar:hover {
+  cursor: pointer;
+}
+.pageBackground:not(.ui-page) .questionBackground.kommentarBG {
+  margin: 0 20px auto !important;
+}
+.ui-page .questionBackground.kommentarBG {
+  margin: 0px auto !important;
+}
+.kommentar .choice {
+  padding: 0px !important;
+}
+
+
+.ui-pop {font-size: 10pt;
+width: 400px;} /*Change pop-up font-size mobile only*/
+
+/*Add padding to + and - sign*/
+div[data-questiontype=imagechoicegrid] div.accordionRow > p.gridRowHeader:after, div[data-questiontype=choicegrid] div.accordionRow > p.gridRowHeader:after, div[data-questiontype=starratinggrid] div.accordionRow > p.gridRowHeader:after {
+    padding-bottom: 20px !important;
+    padding-left: 20% !important;
+}
+
+/*To change the icon, change the content*/
+.accordionRow > p.gridRowHeader:after, .accordionRow > label.gridColumnHeader:after {
+    font-weight: bold;
+    float: right;
+    font-weight: bolder;
+    margin-left: 5px;
+    font-size: 15px;
+    position: static !important;
+    right: 10px;
+}
